@@ -166,10 +166,6 @@ This optimization shows how indexing can drastically reduce query time, improvin
 - **Expand Dataset**: Add more rows to the dataset for broader analysis and scalability testing.
 - **Advanced Querying**: Dive deeper into query optimization and explore the performance of SQL queries on larger datasets.
 
----
-
-## Contributing
-If you would like to contribute to this project, feel free to fork the repository, submit pull requests, or raise issues.
 
 ---
 
