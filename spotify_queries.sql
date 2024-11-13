@@ -284,12 +284,12 @@ SELECT artist,
 track,
 views
 FROM spotify
-WHERE  artist = 'Gorillaz'
+WHERE  artist = 'Ed Sheeran'
  AND most_played_on = 'Youtube'
 ORDER BY stream DESC LIMIT 25
 
 -- Analyze, first it is doing a Seq Scan to get the tracks with artist
--- Gorillaz and that are most played on Youtube, then it is sorting by 
+-- Ed Sheeran and that are most played on Youtube, then it is sorting by 
 -- the amount of streams each has in discending order, and finally getting the limit
 
 CREATE INDEX artist_index ON spotify (artist);
