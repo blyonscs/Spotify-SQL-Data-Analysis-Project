@@ -250,7 +250,7 @@ FROM spotify
 GROUP BY 1   -- Finding the highest and lowest energy
 )
 SELECT album, high_energy - low_energy AS energy_diff
-FROM cte  -- getting the difference
+FROM cte; -- getting the difference
 
 ------------------------------------
 -- Find the cumulative sum of likes for tracks ordered by the number of views
@@ -260,3 +260,27 @@ FROM cte  -- getting the difference
 --Find tracks where the ratio for the energy-to-liveness is greater than 1.2
 ------------------------------------
 
+------------------------------------
+--Query optimization
+------------------------------------
+
+EXPLAIN ANALYZE -- Execution Time: 4.184ms, Planning Time: 0.058ms
+SELECT artist,
+track,
+views
+FROM spotify
+WHERE  artist = 'Gorillaz'
+ AND most_played_on = 'Youtube'
+ORDER BY stream DESC LIMIT 25
+
+-- Analyze, first it is doing a Seq Scan to get the tracks with artist
+-- Gorillaz and that are most played on Youtube, then it is sorting by 
+-- the amount of streams each has in discending order, and finally getting the limit
+
+CREATE INDEX artist_index ON spotify (artist);
+-- After Indexing the above queries Execution Time : 0.037ms, Planning Time: 0.065ms
+-- Making the query significantly faster.
+
+-- adding two more indexes for optimization and speed
+CREATE INDEX track_index ON spotify (track);
+CREATE INDEX album_index ON spotify (album);
