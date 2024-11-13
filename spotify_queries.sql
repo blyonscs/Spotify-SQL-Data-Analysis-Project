@@ -101,10 +101,10 @@ ORDER BY total_streams DESC;
 ----------------------------------
 
 -- Query for all the names of tracks that have over a billion streams --
- SELECT stream, track, artist
- FROM spotify
- WHERE stream > 1000000000
- ORDER BY stream DESC;
+SELECT stream, track, artist
+FROM spotify
+WHERE stream > 1000000000
+ORDER BY stream DESC;
  
 -- Count them aswell --
 SELECT COUNT(track)
@@ -256,9 +256,24 @@ FROM cte; -- getting the difference
 -- Find the cumulative sum of likes for tracks ordered by the number of views
 ------------------------------------
 
+SELECT track, artist, views, SUM(likes) 
+FROM spotify
+GROUP BY 1, 2, 3
+ORDER BY 3 DESC;
+
+
 ------------------------------------
 --Find tracks where the ratio for the energy-to-liveness is greater than 1.2
 ------------------------------------
+WITH cte AS
+(SELECT artist, track, energy, liveness, ROUND((energy/liveness)::numeric, 2) AS track_ratio -- rounding to two dec for the ratio
+FROM spotify
+)
+SELECT artist, track, track_ratio
+FROM cte
+WHERE track_ratio > 1.2
+ORDER BY track_ratio DESC;
+--18782 total tracks over the 1.2 ratio
 
 ------------------------------------
 --Query optimization
