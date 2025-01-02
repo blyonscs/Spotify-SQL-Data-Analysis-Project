@@ -84,8 +84,27 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 
 ### Advanced Level
 1. Find the top 3 most-viewed tracks for each artist using window functions.
-2. Write a query to find tracks where the liveness score is above the average.
-3. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
+```sql
+WITH track_rank
+AS
+(SELECT artist, 
+	track, 
+	SUM(views) as total_views,
+	DENSE_RANK() OVER(PARTITION BY artist ORDER BY SUM(views) DESC) AS rank
+FROM spotify
+GROUP BY 1, 2
+ORDER BY 1, 3 DESC
+) 
+SELECT * FROM track_rank
+WHERE rank <= 3;
+```
+3. Write a query to find tracks where the liveness score is above the average.
+```sql
+SELECT track, artist, liveness
+FROM spotify
+WHERE liveness > (SELECT AVG(liveness) FROM spotify);
+```
+4. **Use a `WITH` clause to calculate the difference between the highest and lowest energy values for tracks in each album.**
 ```sql
 WITH cte
 AS
@@ -103,9 +122,35 @@ FROM cte
 ORDER BY 2 DESC
 ```
    
-5. Find tracks where the energy-to-liveness ratio is greater than 1.2.
-6. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
-
+4. Find tracks where the energy-to-liveness ratio is greater than 1.2.
+```sql
+WITH cte
+AS
+(SELECT artist,
+	track,
+	energy,
+	liveness,
+	ROUND((energy/liveness)::numeric, 2) AS track_ratio -- rounding to two dec for the ratio
+FROM spotify
+)
+SELECT artist,
+	track,
+	track_ratio
+FROM cte
+WHERE track_ratio > 1.2
+ORDER BY track_ratio DESC;
+--18782 total tracks over the 1.2 ratio
+```
+5. Calculate the cumulative sum of likes for tracks ordered by the number of views, using window functions.
+```sql
+SELECT track,
+	artist,
+	views,
+	SUM(likes) 
+FROM spotify
+GROUP BY 1, 2, 3
+ORDER BY 3 DESC;
+```
 
 Here’s an updated section for your **Spotify Advanced SQL Project and Query Optimization** README, focusing on the query optimization task you performed. You can include the specific screenshots and graphs as described.
 
