@@ -150,7 +150,7 @@ This optimization shows how indexing can drastically reduce query time, improvin
 ## Technology Stack
 - **Database**: PostgreSQL
 - **SQL Queries**: DDL, DML, Aggregations, Subqueries, Window Functions
-- **Tools**: pgAdmin 4, PostgreSQL and visualization with Power BI
+- **Tools**: pgAdmin 4, PostgreSQL and visualization with Tableau
 
 ## How to Run the Project
 1. Install PostgreSQL and pgAdmin (if not already installed).
@@ -161,12 +161,6 @@ This optimization shows how indexing can drastically reduce query time, improvin
 
 ---
 
-## Next Steps
-- **Visualize the Data**: Use a data visualization tool like **Tableau** or **Power BI** to create dashboards based on the query results.
-- **Advanced Querying**: Dive deeper into query optimization and explore the performance of SQL queries on larger datasets.
-
-
----
 
 ## License
 This project is licensed under the MIT License.
