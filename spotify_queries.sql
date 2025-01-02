@@ -31,7 +31,7 @@ CREATE TABLE spotify (
 
 -- EDA - Exploratory Data Analysis --
 
-SELECT * FROM spotify
+SELECT * FROM spotify;
 
 -- Total number of songs / all rows--
 SELECT COUNT(*) FROM spotify;
