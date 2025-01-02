@@ -205,6 +205,8 @@ This optimization shows how indexing can drastically reduce query time, improvin
 5. Explore query optimization techniques for large datasets.
 
 ---
+- **Visualizations With Cleaned Dataset**
+- ![Visualization](https://public.tableau.com/app/profile/brandon.lyons/viz/SpotifyDashboard_17357892755210/Dashboard1)
 
 
 ## License
