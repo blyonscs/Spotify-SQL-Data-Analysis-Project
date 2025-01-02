@@ -206,7 +206,7 @@ This optimization shows how indexing can drastically reduce query time, improvin
 
 ---
 ## Visualizations With Cleaned Dataset
-  ![Visualization](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Tableau_Screenshot.png)
+  ![Visualization](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Tableau.png)
 - Link to it: https://public.tableau.com/app/profile/brandon.lyons/viz/SpotifyDashboard_17357892755210/Dashboard1
 
 
