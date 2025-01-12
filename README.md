@@ -47,7 +47,7 @@ When you first try to import this dataset into PostgreSQL with the raw data it w
 ![SET to numbers excel](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Numbers_Excel.png)
 ![DECREASE decimal places twice](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Decrease_Decimal_Excel.png)
 
-When importing the dataset we are still getting errors from it, this is because the escape character is set to ', which is used in the Artist, Track, Album and Channel columns. To get rid of this error set the escape character to " and there should be no more errors when importing the data. To do this go to the options when importing the data
+When importing the dataset we are still getting errors from it, this is because the escape character is set to ', which is used in the Artist, Track, Album and Channel columns. To get rid of this error set the escape character to " and there should be no more errors when importing the data. To do this go to the options when importing the data.
 
 ![SET escape character](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Escape_Char_SQL.png)
 
@@ -60,7 +60,7 @@ Before diving into SQL, it’s important to understand the dataset thoroughly. T
 - Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
 
 ###  3. Data Cleaning in SQL
-Removing Duplicate Data and making sure that the data is complete and consistant with what we are suppose to be looking at is very important. We want the data data to point us in the right direction and not to get bias or wrong data from it so doing this is needed before querying the data for insights.
+Removing Duplicate Data and making sure that the data is complete and consistant with what we are suppose to be looking at is very important. We want the data to point us in the right direction and not to get bias or wrong data from it so doing this is needed before querying the data for insights. Only two records were removed because the duration of the song was 0, but the data was also checked to make sure there were not any NULL values where there sould not have been,
 
 ### 3. Querying the Data
 After the data is inserted, various SQL queries can be written to explore and analyze the data. Queries are categorized into **easy**, **medium**, and **advanced** levels to help progressively develop SQL proficiency.
