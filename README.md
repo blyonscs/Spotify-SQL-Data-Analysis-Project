@@ -8,7 +8,7 @@ Project Category: Advanced
 This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, validating that the dataset is cleaned properly and putting the columns that are needed for visualization into a seperate cleaned dataset. I will also be performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset and visualizing them.
 
 ## Importing
-For this project I am using PostgreSQL to edit and analize the dataset. The first step is to start a new database in PostgreSQL and set a new table with the following query.
+For this project I am using PostgreSQL to edit and analize the dataset. The first step is to start a new database in PostgreSQL and set a new table with the following query. The strings in the dataset are set to VARCHAR(255), the numbers with decimal places as FLOAT's and the numbers that are not suppose to have decimal places as BIGINTS's because some of the numbers in these columns can get quite large
 ```sql
 -- create table
 DROP TABLE IF EXISTS spotify;
@@ -42,6 +42,7 @@ CREATE TABLE spotify (
 ## Project Steps
 
 ### 1. Cleaning The Dataset
+When you first try to import this dataset into PostgreSQL with the raw data it will return errors. The first error is that some of the BIGINT's in the data do have decimal places in them that need to be removed, which can be done in Excel. Open the data file in Excel and select all the integer columns and go to home and select number, this will set all the numbers to two decimal places and then click decrease deecimal twice to make them all regular whole numbers.
 
 ### 1. Data Exploration
 Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
