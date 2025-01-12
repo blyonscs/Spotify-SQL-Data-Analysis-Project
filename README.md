@@ -47,7 +47,7 @@ When you first try to import this dataset into PostgreSQL with the raw data it w
 ![SET to numbers excel](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Numbers_Excel.png)
 ![DECREASE decimal places twice](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Decrease_Decimal_Excel.png)
 
-When importing the dataset we are still getting errors form it, this is because the escape character is set to ', which is used in the Artist, Track, Album and Channel columns. To get rid of this error set the escape character to " and there should be no more errors when importing the data, which is in the options when importing.
+When importing the dataset we are still getting errors from it, this is because the escape character is set to ', which is used in the Artist, Track, Album and Channel columns. To get rid of this error set the escape character to " and there should be no more errors when importing the data. To do this go to the options when importing the data
 
 ![SET escape character](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Escape_Char_SQL.png)
 
