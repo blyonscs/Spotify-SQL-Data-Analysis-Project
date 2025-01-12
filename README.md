@@ -5,8 +5,10 @@ Project Category: Advanced
 ![Spotify Logo](https://github.com/najirh/najirh-Spotify-Data-Analysis-using-SQL/blob/main/spotify_logo.jpg)
 
 ## Overview
-This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
+This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, validating that the dataset is cleaned properly and putting the columns that are needed for visualization into a seperate cleaned dataset. I will also be performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset and visualizing them.
 
+## Importing
+For this project I am using PostgreSQL to edit and analize the dataset. The first step is to start a new database in PostgreSQL and set a new table with the following query.
 ```sql
 -- create table
 DROP TABLE IF EXISTS spotify;
@@ -38,6 +40,8 @@ CREATE TABLE spotify (
 );
 ```
 ## Project Steps
+
+### 1. Cleaning The Dataset
 
 ### 1. Data Exploration
 Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
