@@ -60,7 +60,7 @@ Before diving into SQL, it’s important to understand the dataset thoroughly. T
 - Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
 
 ###  3. Data Cleaning in SQL
-Removing Duplicate Data and making sure that the data is complete and consistant with what we are suppose to be looking at is very important. We want the data to point us in the right direction and not to get bias or wrong data from it so doing this is needed before querying the data for insights. Only two records were removed because the duration of the song was 0, but the data was also checked to make sure there were not any NULL values where there sould not have been,
+Removing Duplicate Data and making sure that the data is complete and consistant with what we are suppose to be looking at is very important. We want the data to point us in the right direction and not to get bias or wrong data from it so doing this is needed before querying the data for insights. Only two records were removed because the duration of the song was 0, but the data was also checked to make sure there were not any NULL values where there should not have been.
 
 ### 3. Querying the Data
 After the data is inserted, various SQL queries can be written to explore and analyze the data. Queries are categorized into **easy**, **medium**, and **advanced** levels to help progressively develop SQL proficiency.
