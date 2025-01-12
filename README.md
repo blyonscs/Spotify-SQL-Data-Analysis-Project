@@ -59,6 +59,9 @@ Before diving into SQL, it’s important to understand the dataset thoroughly. T
 - `Album_type`: The type of album (e.g., single or album).
 - Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
 
+###  3. Data Cleaning in SQL
+Removing Duplicate Data and making sure that the data is complete and consistant with what we are suppose to be looking at is very important. We want the data data to point us in the right direction and not to get bias or wrong data from it so doing this is needed before querying the data for insights.
+
 ### 3. Querying the Data
 After the data is inserted, various SQL queries can be written to explore and analyze the data. Queries are categorized into **easy**, **medium**, and **advanced** levels to help progressively develop SQL proficiency.
 
