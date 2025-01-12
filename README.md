@@ -44,7 +44,7 @@ CREATE TABLE spotify (
 ### 1. Cleaning The Dataset
 When you first try to import this dataset into PostgreSQL with the raw data it will return errors. The first error is that some of the BIGINT's in the data do have decimal places in them that need to be removed, which can be done in Excel. Open the data file in Excel and select all the integer columns and go to home and select number, this will set all the numbers to two decimal places and then click decrease deecimal twice to make them all regular whole numbers.
 ![SET to numbers excel](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Numbers_Excel.png)
-
+![DECREASE decimal places twice](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Decrease_Decimal_Excel.png)
 ### 1. Data Exploration
 Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
 - `Artist`: The performer of the track.
