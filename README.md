@@ -45,7 +45,10 @@ CREATE TABLE spotify (
 When you first try to import this dataset into PostgreSQL with the raw data it will return errors. The first error is that some of the BIGINT's in the data do have decimal places in them that need to be removed, which can be done in Excel. Open the data file in Excel and select all the integer columns and go to home and select number, this will set all the numbers to two decimal places and then click decrease deecimal twice to make them all regular whole numbers.
 ![SET to numbers excel](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Numbers_Excel.png)
 ![DECREASE decimal places twice](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Decrease_Decimal_Excel.png)
-### 1. Data Exploration
+
+When importing the dataset we are still getting errors form it, this is because the escape character is set to ', which is used in the Artist, Track, Album and Channel columns. To get rid of this error set the escape character to " and there should be no more errors when importing the data, which is in the options when importing.
+![SET escape character](https://github.com/blyonscs/Spotify-SQL-Data-Analysis-Project/blob/main/Spotify_Pictures_Readme/Escape_Char_SQL.png)
+### 2. Data Exploration
 Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
 - `Artist`: The performer of the track.
 - `Track`: The name of the song.
@@ -53,7 +56,7 @@ Before diving into SQL, it’s important to understand the dataset thoroughly. T
 - `Album_type`: The type of album (e.g., single or album).
 - Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
 
-### 4. Querying the Data
+### 3. Querying the Data
 After the data is inserted, various SQL queries can be written to explore and analyze the data. Queries are categorized into **easy**, **medium**, and **advanced** levels to help progressively develop SQL proficiency.
 
 #### Easy Queries
