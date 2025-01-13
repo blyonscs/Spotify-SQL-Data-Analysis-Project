@@ -7,6 +7,18 @@ Project Category: Advanced
 ## Overview
 This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, validating that the dataset is cleaned properly and putting the columns that are needed for visualization into a seperate cleaned dataset. I will also be performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset and visualizing them.
 
+## Metadata
+Columns: 24
+Rows: 20594, removed two records in the cleaning
+Integer Columns: 3
+Float Columns: 12
+String Columns: 9
+Size: 5.58 MB
+File Type: CSV
+Unique Artists: 2074
+Unique Tracks: 17717
+Unique Albums: 11854
+
 ## Importing
 For this project I am using PostgreSQL to edit and analize the dataset. The first step is to start a new database in PostgreSQL and set a new table with the following query. The strings in the dataset are set to VARCHAR(255), the numbers with decimal places as FLOAT's and the numbers that are not suppose to have decimal places as BIGINTS's because some of the numbers in these columns can get quite large
 ```sql
